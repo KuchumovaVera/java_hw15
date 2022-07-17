@@ -36,10 +36,6 @@ public class Game {
         if (findByName(playerName2) == null) {
             throw new NotRegisteredException("Игрок " + playerName2 + " не зарегистрирован");
         }
-        if (findByName(playerName1) == null && findByName(playerName2) == null) {
-            throw new NotRegisteredException("Игроки " + playerName1 + ", " + playerName2 + " не зарегистрированы");
-        }
-
         if (findByName(playerName1).getStrength() == findByName(playerName2).getStrength()) {
             return 0;
         }
